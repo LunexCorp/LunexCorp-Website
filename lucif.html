@@ -1,102 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lucif | WhatsApp bot by LunexCorp</title>
-<meta name="description" content="Lucif is a WhatsApp bot with games, an economy, moderation and utilities. Try five commands in your browser, then browse every LunexCorp project.">
-<meta name="theme-color" content="#000000">
-<meta property="og:image" content="assets/lucif.webp">
-<link rel="icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lucif | WhatsApp Bot Engine by LunexCorp</title>
+  <meta name="description" content="Lucif is an intelligent WhatsApp bot featuring games, coin economy, interactive tools, and automated group moderation. Try it live in your browser.">
+  <meta name="theme-color" content="#070a10">
+  <meta property="og:title" content="Lucif WhatsApp Bot Engine">
+  <meta property="og:description" content="Experience games, economy, and group moderation built on Node.js and Baileys. Call +27 63 154 5556 on WhatsApp.">
+  <meta property="og:image" content="assets/lucif.webp">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="lucif">
-<a class="skip" href="#demo">Skip to the demo</a>
-<header class="hdr">
-  <a class="brand" href="index.html"><img src="assets/lunexcorp.webp" alt="" width="34" height="34">LunexCorp</a>
-  <nav aria-label="Main"><a class="keep" href="index.html#projects">All projects</a><a href="#commands">Commands</a><a href="#how">How it's built</a><a class="gh" href="https://github.com/LunexCorp" target="_blank" rel="noopener">GitHub</a></nav>
-</header>
+<body class="theme-lucif">
+  <div class="ambient-glow lucif-glow" aria-hidden="true"></div>
 
-<main id="top">
-<section class="hero" data-t="dark">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <img id="mask" src="assets/lucif.webp" alt="" width="900" height="900">
-  <div class="hero-copy">
-    <h1><span class="l" style="--i:0"><span>Lucif keeps</span></span><span class="l" style="--i:1"><span>your WhatsApp</span></span><span class="l" style="--i:2"><span>group awake.</span></span></h1>
-    <p class="lede">Card games, a coin economy, automatic moderation and handy tools, all inside one chat. Send it five commands here and see how it answers.</p>
-    <div class="row"><a class="btn btn-g" href="#demo" data-focus>Try Lucif now</a><a class="btn btn-line" href="index.html#/repo/Lucif">See the code</a></div>
-    <ul class="facts"><li><strong>4</strong>command categories</li><li><strong>51</strong>items in the shop</li><li><strong>2 to 6</strong>players in Blind 40</li></ul>
-  </div>
+  <header class="hdr">
+    <div class="hdr-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo-wrap">
+          <img src="assets/lunexcorp.webp" alt="LunexCorp Logo" width="36" height="36" onerror="this.style.display='none'">
+        </div>
+        <span class="brand-name">Lunex<span class="accent">Corp</span></span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">&larr; Home & Projects</a>
+        <a href="#demo" class="nav-link highlight">Live Simulator</a>
+        <a href="#commands" class="nav-link">Commands</a>
+        <a href="#" data-wa class="btn btn-sm btn-whatsapp">Connect Bot</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="demo" id="demo">
-    <div class="phone" aria-label="Lucif demo chat">
-      <div class="sb"><span>12:00</span><span>5G ▂▄▆ <i></i></span></div>
-      <div class="bar">
-        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20z"/></svg>
-        <img src="assets/lucif-avatar.webp" alt="" width="38" height="38">
-        <div class="who"><b>Lucif</b><span id="status">online</span></div>
-        <div class="ic" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M15 8v8H5V8zm1-2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4V7a1 1 0 0 0-1-1z"/></svg>
-          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.100.4 2.300.6 3.600.6.600 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.500c.6 0 1 .4 1 1 0 1.300.2 2.500.6 3.600.1.300 0 .700-.2 1z"/></svg>
-          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+  <main id="top">
+    <section class="hero-lucif">
+      <div class="wrap hero-lucif-grid">
+        <div class="hero-lucif-copy">
+          <div class="badge-pill green">
+            <span class="pulse-dot"></span> Active Bot Status: Online
+          </div>
+          <h1>Energize Your <span class="text-gradient-green">WhatsApp Groups</span> Instantly.</h1>
+          <p class="lede">
+            Multiplayer card games, coin economy, warning systems, and dynamic utility modules — all executing effortlessly inside your group chats.
+          </p>
+          <div class="cta-group">
+            <a href="#" data-wa class="btn btn-whatsapp btn-glow-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Add Lucif (063 154 5556)
+            </a>
+            <a href="#demo" class="btn btn-glass">Try In-Browser Demo</a>
+          </div>
+          <ul class="feature-pills">
+            <li><strong>4+</strong> Command Modules</li>
+            <li><strong>50+</strong> Economy Items</li>
+            <li><strong>2-6</strong> Player Card Games</li>
+            <li><strong>0.1s</strong> Reaction Speed</li>
+          </ul>
+        </div>
+
+        <div class="demo-wrapper" id="demo">
+          <div class="phone-frame" aria-label="Lucif Interactive WhatsApp Simulator">
+            <div class="phone-header">
+              <div class="phone-status-bar">
+                <span>12:00</span>
+                <span class="phone-icons">5G ▇▆▅ 🔋</span>
+              </div>
+              <div class="chat-app-bar">
+                <div class="back-ic">&larr;</div>
+                <div class="avatar-wrap">
+                  <img src="assets/lucif-avatar.webp" alt="Lucif" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='20' fill='%2310b981'/></svg>'">
+                  <span class="online-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <b class="chat-name">Lucif Bot Engine</b>
+                  <span id="status" class="chat-status">online</span>
+                </div>
+                <div class="chat-actions">
+                  <span>📹</span> <span>📞</span> <span>⋮</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-viewport" id="msgs" role="log" aria-live="polite"></div>
+
+            <form class="chat-input-bar" id="form" autocomplete="off">
+              <div class="chat-input-field">
+                <span class="input-icon">😊</span>
+                <label class="sr-only" for="input">Type command</label>
+                <input id="input" type="text" placeholder="Type a command like #menu..." maxlength="120">
+                <span class="input-icon">📎</span>
+              </div>
+              <button id="send" type="submit" aria-label="Send Command">
+                <svg id="ico" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"></svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="chip-drawer" id="chips">
+            <button type="button" data-cmd="#menu">#menu</button>
+            <button type="button" data-cmd="#ping">#ping</button>
+            <button type="button" data-cmd="#flip">#flip</button>
+            <button type="button" data-cmd="#echo hello">#echo hello</button>
+            <button type="button" data-cmd="#no">#no</button>
+          </div>
+
+          <div class="demo-status-row">
+            <div class="pips-bar" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span id="counter" class="counter-text">5 commands remaining</span>
+          </div>
         </div>
       </div>
-      <div class="chat" id="msgs" role="log" aria-live="polite"></div>
-      <form class="inp" id="form" autocomplete="off">
-        <div class="f">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-3.500-9a1.500 1.500 0 1 0 0-3 1.500 1.500 0 0 0 0 3zm7 0a1.500 1.500 0 1 0 0-3 1.500 1.500 0 0 0 0 3zM12 17.500c2.300 0 4.300-1.500 5-3.500H7c.700 2 2.700 3.500 5 3.500z"/></svg>
-          <label class="sr-only" for="input">Message</label>
-          <input id="input" type="text" placeholder="Message" maxlength="120" enterkeyhint="send">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M16.500 6v11.500a4 4 0 0 1-8 0V5a2.500 2.500 0 0 1 5 0v10.500a1 1 0 0 1-2 0V6H10v9.500a2.500 2.500 0 0 0 5 0V5a4 4 0 0 0-8 0v12.500a5.500 5.500 0 0 0 11 0V6z"/></svg>
+    </section>
+
+    <section class="sec wrap" id="commands">
+      <div class="sec-header center">
+        <h2>Built for Everything Groups Need</h2>
+        <p class="sub">All commands begin with the <code>#</code> prefix. Send <code>#menu</code> directly to the bot for full access.</p>
+      </div>
+
+      <div class="command-grid">
+        <div class="command-card">
+          <div class="card-icon">⚡</div>
+          <h3>Utilities & Tools</h3>
+          <p>Instant pings, QR generators, translation services, aircraft lookups, and interactive menus.</p>
+          <button class="btn btn-sm btn-glass" data-run="#ping">Try #ping</button>
         </div>
-        <button id="send" type="submit" aria-label="Send"><svg id="ico" width="24" height="24" viewBox="0 0 24 24"></svg></button>
-      </form>
-      <div class="gest"></div>
-    </div>
-    <div class="chips" id="chips" aria-label="Suggested commands">
-      <button type="button" data-cmd="#ping">#ping</button><button type="button" data-cmd="#echo hello">#echo</button><button type="button" data-cmd="#no">#no</button><button type="button" data-cmd="#flip">#flip</button><button type="button" data-cmd="#menu">#menu</button>
-    </div>
-    <div class="left"><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span id="counter">5 free commands</span></div>
-  </div>
-</section>
+        <div class="command-card">
+          <div class="card-icon">💎</div>
+          <h3>Economy Engine</h3>
+          <p>Virtual jobs, daily streaks, item shops, inventory trading, and global leaderboards.</p>
+          <button class="btn btn-sm btn-glass" data-run="#menu">View Economy</button>
+        </div>
+        <div class="command-card">
+          <div class="card-icon">🃏</div>
+          <h3>Multiplayer Games</h3>
+          <p>Card games like Blind 40 (2-6 players), Russian Roulette, decision flippers, and quizzes.</p>
+          <button class="btn btn-sm btn-glass" data-run="#flip">Try #flip</button>
+        </div>
+        <div class="command-card">
+          <div class="card-icon">🛡️</div>
+          <h3>Group Moderation</h3>
+          <p>Automated link protection, anti-spam filters, strike systems, and automatic ban escalations.</p>
+          <span class="badge-mini">Auto Protection</span>
+        </div>
+      </div>
+    </section>
 
-<section class="sec" id="commands" data-t="dark"><div class="wrap">
-  <h2>What Lucif does</h2>
-  <p class="sub">Commands start with <code>#</code>. Send <code>#menu</code> in the chat to see them all.</p>
-  <div class="cmds">
-    <div class="cmd"><h3>Utilities</h3><p>Ping, QR codes, translation, flight lookups and a menu with buttons.</p><button class="try" data-run="#ping">#ping</button></div>
-    <div class="cmd"><h3>Economy</h3><p>Join, work, claim daily rewards, shop and climb the leaderboard.</p><span></span></div>
-    <div class="cmd"><h3>Games</h3><p>Russian Roulette and Blind 40, a card game for 2 to 6 players.</p><span></span></div>
-    <div class="cmd"><h3>Moderation</h3><p>Scam and abuse filtering that warns first, then removes repeat offenders.</p><span></span></div>
-  </div>
-</div></section>
-
-<section class="sec" id="how" data-t="dark" style="padding-top:0"><div class="wrap how">
-  <div>
-    <h2>Small files, one command each</h2>
-    <p class="sub">Lucif runs on Node.js with Baileys. Every command is a single file in a folder named for its category, and the bot loads them all on start.</p>
-    <ul><li>Interactive buttons are routed by prefix, so a tap lands in the right command.</li><li>Accounts, items and violations live in SQLite.</li></ul>
-  </div>
-  <figure class="code"><figcaption>Commands/Utils/ping.js</figcaption><pre><code><span class="k">module</span>.exports = {
+    <section class="sec wrap">
+      <div class="architecture-box">
+        <div class="arch-info">
+          <h2>High-Performance Modular Architecture</h2>
+          <p>
+            Lucif is built using <strong>Node.js</strong> and the high-speed <strong>@whiskeysockets/baileys</strong> library, ensuring lightweight memory usage and instant response times.
+          </p>
+          <ul class="arch-list">
+            <li><strong>Isolated Command Files:</strong> Every command runs independently for maximum reliability.</li>
+            <li><strong>SQLite Persistence:</strong> Fast transactional DB handling balance, inventory, and warnings.</li>
+            <li><strong>WhatsApp Native:</strong> Full support for dynamic buttons, lists, and direct media generation.</li>
+          </ul>
+        </div>
+        <div class="code-preview">
+          <div class="code-header">Commands/Utils/ping.js</div>
+          <pre><code><span class="k">module</span>.exports = {
   name: <span class="s">'ping'</span>,
-  description: <span class="s">'Check that Lucif is awake'</span>,
-  run: <span class="k">async</span> (ctx) =&gt; {
-    <span class="k">await</span> ctx.reply(<span class="s">'Pong!'</span>);
+  description: <span class="s">'Check bot health & latency'</span>,
+  run: <span class="k">async</span> (ctx) => {
+    <span class="k">const</span> start = Date.now();
+    <span class="k">await</span> ctx.reply(<span class="s">'Pong! 🏓'</span>);
   }
-};</code></pre></figure>
-  <ol class="pipe" id="pipe" aria-label="Deploy steps"><li style="--i:0">git push</li><li style="--i:1">GitHub Actions</li><li style="--i:2">SSH to server</li><li style="--i:3">PM2 reload</li></ol>
-</div></section>
+};</code></pre>
+        </div>
+      </div>
+    </section>
 
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="cta"><div><h2>Ready for the real thing?</h2><p>The demo only shows a fraction. Group games, the full economy and moderation work in WhatsApp.</p><a class="btn btn-g" data-wa href="#">Add Lucif on WhatsApp</a></div><img src="assets/lucif.webp" alt=""></div>
-  <footer><img src="assets/lunexcorp.webp" alt=""><span>&copy; <span id="year"></span> LunexCorp</span><a href="index.html">LunexCorp home</a><a href="index.html#projects">All projects</a><span>Lucif is independent and not affiliated with WhatsApp or Meta.</span></footer>
-</div></section>
-</main>
+    <section class="wrap cta-block-wrap">
+      <div class="cta-block">
+        <div>
+          <h2>Ready to transform your chat group?</h2>
+          <p>Connect Lucif to WhatsApp right now and start playing card games and managing group moderation in seconds.</p>
+          <a href="#" data-wa class="btn btn-whatsapp btn-glow-green">
+            Connect to WhatsApp (063 154 5556)
+          </a>
+        </div>
+      </div>
+    </section>
 
-<script src="common.js"></script>
-<script src="lucif.js"></script>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <img src="assets/lunexcorp.webp" alt="" width="28" height="28" onerror="this.style.display='none'">
+          <span>&copy; <span id="year"></span> LunexCorp</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">LunexCorp Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="#" data-wa>WhatsApp: 063 154 5556</a>
+        </div>
+        <p class="footer-disclaimer">Lucif is an independent platform and is not affiliated with WhatsApp or Meta Platforms.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="lucif.js"></script>
 </body>
 </html>
