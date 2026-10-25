@@ -4,48 +4,94 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LunexCorp | Bots, APIs and tools</title>
-<meta name="description" content="LunexCorp builds bots, APIs and tools. Meet Lucif, our WhatsApp bot, and browse every public project.">
+<meta name="description" content="LunexCorp builds bots, APIs and tools. Meet Lucif, our WhatsApp bot, browse every public project and read the release history.">
 <meta name="theme-color" content="#eee9da">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LunexCorp">
+<meta property="og:title" content="LunexCorp | Bots, APIs and tools">
+<meta property="og:description" content="LunexCorp builds bots, APIs and tools. Meet Lucif, our WhatsApp bot, and browse every public project.">
 <meta property="og:image" content="assets/lunexcorp.webp">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="world-cream">
+<a class="skip" href="#main">Skip to content</a>
 <header class="hdr">
   <a class="brand" href="index.html"><img src="assets/lunexcorp.webp" alt="" width="34" height="34">LunexCorp</a>
-  <nav aria-label="Main"><a class="keep" href="lucif.html">Lucif</a><a href="#projects">Projects</a><a class="gh" href="https://github.com/LunexCorp" target="_blank" rel="noopener">GitHub</a></nav>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span></button>
+  <nav id="nav" aria-label="Main">
+    <a href="lucif.html">Lucif</a><a href="#projects">Projects</a><a href="releases.html">Releases</a><a class="gh" data-gh href="#">GitHub</a>
+  </nav>
 </header>
 
-<main class="cream" id="top"><div class="wrap">
-  <section class="top">
-    <div>
-      <h1>LunexCorp builds bots, APIs and tools.</h1>
-      <p class="lead-p">Everything is public on GitHub and runs on our own server. Our main project is Lucif, a WhatsApp bot with games, a coin economy and moderation.</p>
-      <div class="row"><a class="btn btn-ink" href="lucif.html">Meet Lucif</a><a class="btn btn-clay" href="#projects">Browse projects</a></div>
+<main id="main">
+  <section class="hero-c">
+    <div class="wrap hero-c-in">
+      <div class="hero-c-copy">
+        <p class="eyebrow">Independent software studio</p>
+        <h1>Bots, APIs and tools, <em>built to be used.</em></h1>
+        <p class="lead">LunexCorp builds software that runs on our own server. Our flagship is Lucif, a WhatsApp bot with games, a coin economy and moderation. Everything else we publish lives on GitHub.</p>
+        <div class="row"><a class="btn btn-ink" href="lucif.html">Explore Lucif</a><a class="btn btn-clay" href="#projects">Browse projects</a></div>
+      </div>
+      <figure class="hero-c-art"><img src="assets/lunexcorp.webp" alt="LunexCorp logo" width="380" height="380" fetchpriority="high"></figure>
     </div>
-    <img src="assets/lunexcorp.webp" alt="LunexCorp logo" width="380" height="380">
+    <ul class="wrap build" aria-label="What LunexCorp builds">
+      <li><b>Bots</b><span>Lucif runs games, an economy and moderation inside WhatsApp groups.</span></li>
+      <li><b>APIs</b><span>REST services that sit beside the bots and expose their data.</span></li>
+      <li><b>Tools</b><span>Developer tools such as a RAD Studio plugin and a SQLite wrapper.</span></li>
+      <li><b>Software</b><span>Desktop and Android apps written in Delphi and Kotlin.</span></li>
+    </ul>
   </section>
 
-  <a class="cta feat" href="lucif.html" aria-label="Open the Lucif page">
-    <div><h2>Lucif</h2><p>Our main project. A WhatsApp bot with card games, an economy, automatic moderation and handy tools. Try five commands in your browser.</p><span class="btn btn-g">Open Lucif</span></div>
-    <img src="assets/lucif.webp" alt="">
-  </a>
+  <section class="wrap flag" aria-labelledby="flag-h">
+    <div class="flag-card">
+      <div class="flag-copy">
+        <p class="eyebrow">Flagship product</p>
+        <h2 id="flag-h">Lucif</h2>
+        <p>A WhatsApp bot that keeps a group busy and under control. Play Blind 40 or Russian Roulette, earn and spend coins, and let the filter handle scams and abuse.</p>
+        <ul class="ticks"><li>Card games for 2 to 6 players</li><li>Economy with a shop, daily rewards and a leaderboard</li><li>Moderation that warns first, then removes repeat offenders</li></ul>
+        <div class="row"><a class="btn btn-g" href="lucif.html">Try the demo</a><a class="btn btn-line" data-wa="#menu" href="#">Chat with Lucif</a></div>
+      </div>
+      <div class="flag-chat" aria-label="Example conversation with Lucif (static preview)" role="img">
+        <img class="flag-mask" src="assets/lucif.webp" alt="" width="420" height="420" loading="lazy">
+        <div class="bub out">#ping<small>12:00</small></div>
+        <div class="bub in">🏓 <b>Pong!</b><br>Latency: 32 ms<small>12:00</small></div>
+        <div class="bub out">#flip<small>12:01</small></div>
+        <div class="bub in">🪙 <b>Heads</b><small>12:01</small></div>
+        <p class="flag-note">Preview of the in-browser demo</p>
+      </div>
+    </div>
+  </section>
 
-  <section id="projects" class="sec">
-    <h2>All projects</h2>
-    <p>Pulled live from GitHub. Open a project here to read it, then jump to GitHub when you want to star or fork it.</p>
+  <section id="projects" class="wrap sec-c" aria-labelledby="proj-h">
+    <p class="eyebrow">Project directory</p>
+    <h2 id="proj-h">Everything we publish</h2>
+    <p class="intro">Pulled live from GitHub. Open a project to read its README and recent activity here, then jump to GitHub to star or fork it.</p>
     <div class="stats" id="stats" aria-live="polite"></div>
-    <div class="ctl"><label class="sr-only" for="q">Search projects</label><input id="q" type="search" placeholder="Search projects"><label class="sr-only" for="sort">Sort</label><select id="sort"><option value="pushed">Recently updated</option><option value="stars">Most stars</option><option value="name">Name</option></select></div>
-    <div class="repos" id="repos" aria-live="polite"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+    <div class="ctl">
+      <div class="field"><label for="q">Search projects</label><input id="q" type="search" placeholder="Search by name, topic or description" autocomplete="off"></div>
+      <div class="field"><label for="sort">Sort by</label><select id="sort"><option value="pushed">Recently updated</option><option value="stars">Most stars</option><option value="name">Name</option></select></div>
+    </div>
+    <p class="count" id="count" role="status" aria-live="polite"></p>
+    <div class="repos" id="repos" aria-busy="true"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   </section>
+</main>
 
-  <footer><img src="assets/lunexcorp.webp" alt=""><span>&copy; <span id="year"></span> LunexCorp</span><a href="https://github.com/LunexCorp" target="_blank" rel="noopener">github.com/LunexCorp</a><span>Lucif is independent and not affiliated with WhatsApp or Meta.</span></footer>
-</div></main>
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><a class="brand" href="index.html"><img src="assets/lunexcorp.webp" alt="" width="34" height="34">LunexCorp</a><p>LunexCorp is the studio. Lucif is the WhatsApp bot it builds and runs.</p></div>
+    <nav class="foot-col" aria-label="Company"><h3>Company</h3><a data-gh href="#">GitHub</a><a href="#projects">Projects</a><a href="releases.html">Releases</a></nav>
+    <nav class="foot-col" aria-label="Lucif"><h3>Lucif</h3><a href="lucif.html">Meet Lucif</a><a data-wa="#menu" href="#">Chat with Lucif</a><a data-channel href="#">Join the Official Channel</a></nav>
+    <p class="foot-legal">&copy; <span data-year></span> LunexCorp. Lucif is independent and not affiliated with WhatsApp or Meta.</p>
+  </div>
+</footer>
 
-<aside id="sheet" aria-hidden="true" aria-label="Project details"></aside>
+<aside id="sheet" role="dialog" aria-modal="true" aria-label="Project details" aria-hidden="true"></aside>
 <script src="common.js"></script>
 <script src="script.js"></script>
 </body>

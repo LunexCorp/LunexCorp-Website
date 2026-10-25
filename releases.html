@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Releases | LunexCorp and Lucif</title>
+<meta name="description" content="Every published release across LunexCorp's public GitHub projects, with version numbers, dates, full release notes and download links. Search and filter the whole history.">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LunexCorp">
+<meta property="og:title" content="Release archive | LunexCorp">
+<meta property="og:description" content="Every published release across LunexCorp's public projects, searchable and filterable.">
+<meta property="og:image" content="assets/lucif.webp">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lucif">
+<a class="skip" href="#list">Skip to the releases</a>
+<header class="hdr">
+  <a class="brand" href="index.html"><img src="assets/lunexcorp.webp" alt="" width="34" height="34">LunexCorp</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span></button>
+  <nav id="nav" aria-label="Main">
+    <a href="lucif.html">Lucif</a><a href="index.html#projects">All projects</a><a aria-current="page" href="releases.html">Releases</a><a class="gh" data-gh href="#">GitHub</a>
+  </nav>
+</header>
+
+<main id="top" class="rel-page">
+  <section class="wrap rel-head">
+    <p class="eyebrow">Release archive</p>
+    <h1>Every release, in one place.</h1>
+    <p class="lede">All published GitHub releases across LunexCorp's public projects, newest first. Notes and downloads come straight from the release pages.</p>
+    <p class="notice" id="lucif-note">Lucif's own source repository isn't publicly visible on GitHub, so it has no public releases to list. If it becomes public and publishes a release, it will appear here automatically.</p>
+    <p class="source" id="source" role="status" aria-live="polite">Loading releases…</p>
+  </section>
+
+  <section class="wrap" aria-label="Latest release"><div id="latest"></div></section>
+
+  <section class="wrap rel-body" aria-labelledby="all-h">
+    <h2 id="all-h">All releases</h2>
+    <form class="rel-ctl" id="ctl" role="search" aria-label="Filter releases">
+      <div class="field grow"><label for="rq">Search versions and notes</label><input id="rq" type="search" placeholder="e.g. 1.1.0, formatter, PDF" autocomplete="off"></div>
+      <div class="field"><label for="rkind">Type</label><select id="rkind"><option value="all">All releases</option><option value="stable">Stable only</option><option value="pre">Pre-releases only</option></select></div>
+      <div class="field"><label for="rrepo">Project</label><select id="rrepo"><option value="all">All projects</option></select></div>
+      <div class="field"><label for="rsort">Order</label><select id="rsort"><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+    </form>
+    <p class="count" id="rcount" role="status" aria-live="polite"></p>
+    <ol class="timeline" id="list" aria-busy="true"><li class="sk dark"></li><li class="sk dark"></li></ol>
+    <div class="more"><button class="btn btn-line" type="button" id="more" hidden>Show more releases</button></div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><a class="brand" href="index.html"><img src="assets/lunexcorp.webp" alt="" width="34" height="34">LunexCorp</a><p>Lucif is built and run by LunexCorp.</p></div>
+    <nav class="foot-col" aria-label="Lucif"><h3>Lucif</h3><a href="lucif.html">Meet Lucif</a><a data-wa="#menu" href="#">Chat with Lucif</a><a data-channel href="#">Join the Official Channel</a></nav>
+    <nav class="foot-col" aria-label="Company"><h3>Company</h3><a href="index.html">LunexCorp home</a><a href="index.html#projects">All projects</a><a data-gh href="#">GitHub</a></nav>
+    <p class="foot-legal">&copy; <span data-year></span> LunexCorp. Lucif is independent and not affiliated with WhatsApp or Meta.</p>
+  </div>
+</footer>
+<script src="common.js"></script>
+<script src="releases.js"></script>
+</body>
+</html>
