@@ -1,0 +1,51 @@
+{
+ "generatedAt": "2026-10-25T20:20:00Z",
+ "owner": "LunexCorp",
+ "repos": [
+  "Audio-Entropy-Seed-Generator",
+  "Coding-Jam",
+  "Delphi-Apps",
+  "Envoy",
+  "FileSorterX",
+  "LunexCorp",
+  "LunexCorp-Website",
+  "RADEssentials",
+  "SQL-Wrapper"
+ ],
+ "releases": [
+  {
+   "repo": "RADEssentials",
+   "tag": "Release",
+   "name": "Release V 1.1.0",
+   "url": "https://github.com/LunexCorp/RADEssentials/releases/tag/Release",
+   "date": "2026-10-24T23:34:59Z",
+   "pre": false,
+   "html": "<p>Improves the Search Everywhere palette with a refreshed layout and single-click result opening. When no source editor is open, the palette now searches IDE actions only. The README has also been updated to reflect the current menu and feature set.</p>",
+   "assets": [
+    {
+     "name": "RADEssentials.bpl",
+     "size": 367616,
+     "url": "https://github.com/LunexCorp/RADEssentials/releases/download/Release/RADEssentials.bpl",
+     "downloads": null
+    }
+   ]
+  },
+  {
+   "repo": "RADEssentials",
+   "tag": "Beta",
+   "name": "Beta Release V 1.0.0",
+   "url": "https://github.com/LunexCorp/RADEssentials/releases/tag/Beta",
+   "date": "2026-10-24T23:30:18Z",
+   "pre": false,
+   "html": "<p>This release includes the Format X source formatter and GitHub publishing tools for RAD Studio. GitHub sign-in uses a personal access token, with repository access checks, file and folder selection, push progress, and optional release uploads. The Git window is dockable. The PDF viewer is still in development.</p>\n<p>Before running from RAD Studio, open <strong>Run &gt; Parameters</strong>. Set Host application to your RAD Studio installation\u2019s <strong>bds.exe</strong> (use Browse if needed; for example, <strong>C:\\Program Files (x86)\\Embarcadero\\Studio\\23.0\\bin\\bds.exe</strong>). Set Parameters to:</p>\n<p>This launches a separate RAD Studio instance with an isolated settings profile, helping protect your main IDE configuration during testing.</p>\n<p>There are still bugs in this release. Please report issues and send feature suggestions to <a href=\"mailto:lunex.corpofficial@gmail.com\">lunex.corpofficial@gmail.com</a>.</p>",
+   "assets": [
+    {
+     "name": "RADEssentials.bpl",
+     "size": 309248,
+     "url": "https://github.com/LunexCorp/RADEssentials/releases/download/Beta/RADEssentials.bpl",
+     "downloads": null
+    }
+   ]
+  }
+ ]
+}
